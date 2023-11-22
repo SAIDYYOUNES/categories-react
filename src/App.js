@@ -6,8 +6,10 @@ import Footer from "./Pages/Footer.js";
 import Register from "./Pages/Register.js";
 import Categories from "./Pages/Categories.js";
 import NotFound from "./Pages/NotFound.js";
-import './App.css';
 import Thank from "./Pages/Thank.js";
+import { CategoriesSession } from './Components/CategoriesSession.js';
+import { CategoriesSubSession } from './Components/CategoriesSubSession.js';
+import './App.css';
 
 function App() {
   return (
@@ -19,10 +21,12 @@ function App() {
         <Route path="/thank" element={<Thank />} />
         <Route path="/about" element={<About />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/categories" element={<Categories />} />
-          {/* <Route path="" element={<Categories />} /> */}
+        <Route path='/categories' element={<Categories/>}>
+            <Route path=':sessions' element={<CategoriesSession/>}>
+              <Route path=':subsessions' element={<CategoriesSubSession/>} />
+            </Route>
+          </Route>
         
-        <Route/>
         <Route path="*" element={<NotFound />} />
     
       </Routes>
