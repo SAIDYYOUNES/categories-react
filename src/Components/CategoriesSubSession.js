@@ -16,12 +16,13 @@ export const CategoriesSubSession = () => {
 
   return (
     <>
-    <div className="mt-8">
+    <div className="text-start mt-8">
 
-      <h2>{data.name}</h2>
+      <h2 className='font-bold text-xl'>{data.name}</h2>
       <p>{data.desc}</p>
       <h5>{data.speaker.name}</h5>
       <p>{data.speaker.title} at {data.speaker.org}</p>
+      <br />
       <p>{data.speaker.bio}</p>
     </div>
     </>

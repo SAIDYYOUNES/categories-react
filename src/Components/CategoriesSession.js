@@ -17,16 +17,26 @@ export const CategoriesSession = () => {
     <>
       {data ? (
         <>
-          <h2>{data.name}</h2>
-          <div className="div-as-button">
+          <h2 className='font-bold text-2xl mb-3'>{data.name}</h2>
+          <div className="flex gap-8">
             {data.sessions.map((session) => (
               <NavLink
                 to={session.id}
                 style={navLinkStyles}
-                className='button-session'
+                className='
+                hover:scale-105 
+                 w-1/3
+                h-[80px]
+                px-[6px]
+                py-[20px]
+                text-start
+                text-decoration-none
+                cursor-pointer
+                flex flex-col
+                justify-evenly'
                 key={session.id}
               >
-                <p className="bold-size">{session.name}</p>
+                <p className=" font-bold text-xl  ">{session.name}</p>
                 <p>{session.id}</p>
               </NavLink>
             ))}

@@ -12,8 +12,8 @@ export default  function Categories(){
 
   return (
     <>
-      <div className="mb-[13rem]">
-        <h1 className="mt-10">Session Categories</h1>
+      <div className="mb-[20rem]">
+        <h1 className="mt-10 text-2xl font-bold">Session Categories</h1>
         <section className="FlexContainer">
           {data ? (
             data.map((category) => (
